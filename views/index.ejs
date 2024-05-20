@@ -1,0 +1,19 @@
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<div>
+  <h2>The Messageboard</h2>
+  <form action="/new">
+    <button type="submit">Create new Message</button>
+  </form>
+  <br>
+  <ul>
+    <% messages.forEach(message => { %>
+      <li>
+        <h3>From: <%= message.user %></h3>
+        <p><%= message.text %></p>
+        <small><%= message.added %></small>
+      </li>
+    <% }) %>
+  </ul>
+</div>
